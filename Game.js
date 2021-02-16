@@ -67,18 +67,18 @@ class Game{
             text("player 2 : " + allPlayers.player2.score, 50, 100) ;
         }
 
-        if(KeyIsDowm(RIGHT_ARROW) && player.index != null){
+        if(keyIsDown(RIGHT_ARROW) && player.index != null){
             player.distance  -10 ;
             player.update() ;
         }
 
-       if(KeyIsDown(LEFT_ARROW)&& player.index != null){
+       if(keyIsDown(LEFT_ARROW)&& player.index != null){
             player.distance +10 ;
             player.update() ;
        }
         
        if(frameCount% 20 === 0){
-           fruits =  createSprites(random(100,1000), 0, 100, 100) ;
+           fruits =  createSprite(random(100,1000), 0, 100, 100) ;
            fruits.velocityY = 6 ;
            var rand = Math.round(random(1,5)) ;
            switch(rand){
